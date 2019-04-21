@@ -1,0 +1,17 @@
+SChema
+=================================
+Symbol : string
+avgVolume : gloat
+Range: string
+LastDiv: double
+Comapany Name : String ?
+Prices : [
+    {
+        Date,
+        Open,
+        High
+        Low,
+        Close
+        Volume
+    }
+]

@@ -4,11 +4,14 @@ const StockPriceSchema = require('./stock_price.model');
 const { Schema } = mongoose;
 
 const StockSchema = new Schema({
-  symbol: { type: String, required: true, max: 10 },
+  symbol: { type: String, required: true, unique: true, max: 10 },
+  currentPrice: { type: Number, required: true },
   avgVolume: { type: Number, required: true },
+  marketCap: { type: Number },
+  lastDividend: { type: Number },
   range: { type: String },
   companyName: { type: String },
-  prices: [StockPriceSchema]
+  prices: [StockPriceSchema.schema]
 });
 
 
